@@ -209,6 +209,7 @@ header {
   font-family: "Gilroy-Medium", sans-serif;
   color: #232323;
   line-height: 1.2;
+  z-index: -1;
 }
 @media only screen and (max-width: 1278px) {
   .page-name {
@@ -562,6 +563,13 @@ footer {
   font-weight: bold;
   line-height: 1.333;
   text-align: center;
+}
+
+.contract_text {
+  font-size: 14px;
+  font-family: "Gilroy-SemiBold", sans-serif;
+  color: #010101;
+  line-height: 1.2;
 }
 
 /*# sourceMappingURL=main.css.map */
