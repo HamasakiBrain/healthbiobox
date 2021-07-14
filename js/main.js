@@ -8,7 +8,7 @@ $(document).ready(function() {
     let mobile = $("body").width() < 550
     console.info("Width: ", $("body").width())
     console.info("Mobile: ",mobile)
-    $(".burger-mobile, .close").on('click', function (){
+    $(".burger-mobile, .my-close").on('click', function (){
         $(".fixed-menu").toggleClass('active')
     })
     if (mobile){
