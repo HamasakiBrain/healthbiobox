@@ -7,6 +7,16 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
+@media only screen and (max-width: 1278px) {
+  body {
+    background-size: contain;
+  }
+}
+@media only screen and (max-width: 550px) {
+  body {
+    background-size: 225px;
+  }
+}
 
 .container {
   max-width: 1280px;
@@ -17,12 +27,27 @@ header {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 550px) {
+  header {
+    justify-content: center;
+  }
+}
 
 .info-flex {
   margin: 30px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media only screen and (max-width: 550px) {
+  .info-flex {
+    margin: 10px;
+  }
 }
 
 .info-block {
@@ -35,12 +60,34 @@ header {
   background-image: -webkit-linear-gradient(90deg, #66b2d1 41%, #b0d9ea 100%);
   background-image: -ms-linear-gradient(90deg, #66b2d1 41%, #b0d9ea 100%);
 }
+@media only screen and (max-width: 1278px) {
+  .info-block {
+    width: 570px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .info-block {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .info-block {
+    padding: 10px;
+    margin: 20px 0;
+  }
+}
 .info-block-title {
   font-size: 18px;
   font-family: "Gilroy-Bold", sans-serif;
   color: white;
   font-weight: bold;
   line-height: 1.2;
+}
+@media only screen and (max-width: 550px) {
+  .info-block-title {
+    font-size: 11px;
+  }
 }
 .info-block-text {
   font-size: 48px;
@@ -49,12 +96,28 @@ header {
   line-height: 1.2;
   margin-top: 22px;
 }
+@media only screen and (max-width: 550px) {
+  .info-block-text {
+    font-size: 14px !important;
+    margin-top: 5px;
+  }
+}
 .info-block-text_link {
   font-size: 14px;
   margin-top: 25%;
 }
+@media only screen and (max-width: 550px) {
+  .info-block-text_link {
+    margin-top: 0;
+  }
+}
 .info-block-text_link img {
   margin-right: 10px;
+}
+@media only screen and (max-width: 550px) {
+  .info-block-text_link img {
+    width: 0;
+  }
 }
 
 .page-name {
@@ -68,9 +131,60 @@ header {
 @media only screen and (max-width: 1278px) {
   .page-name {
     bottom: 0;
+    font-size: 36px;
+    margin-bottom: 20px;
+    padding-left: 50px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .page-name {
+    padding-left: 0;
+    font-size: 25px;
+    text-align: center;
   }
 }
 
+.burger-mobile {
+  position: fixed;
+  bottom: 50%;
+  left: -2%;
+  transform: rotate(90deg);
+  z-index: 100;
+  max-width: max-content;
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 18px;
+  display: none;
+  padding: 4px 15px;
+  border-radius: 100px;
+  text-decoration: none !important;
+  color: #232323;
+}
+@media only screen and (max-width: 550px) {
+  .burger-mobile {
+    left: -8%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .burger-mobile {
+    display: block;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .burger-mobile {
+    font-size: 13px;
+  }
+}
+.burger-mobile.active {
+  color: #fff !important;
+  background-color: #f27733;
+}
+
+@media only screen and (max-width: 550px) {
+  .aside {
+    padding: 0;
+    width: 100%;
+  }
+}
 .aside li {
   list-style: none;
 }
@@ -85,9 +199,23 @@ header {
   text-decoration: none !important;
   color: #232323;
 }
+@media only screen and (max-width: 992px) {
+  .aside li a {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .aside li a {
+    margin: 0 auto;
+  }
+}
 .aside li a.active {
   color: #fff !important;
   background-color: #f27733;
+}
+.aside li a:hover {
+  background-color: #f27733;
+  color: #fff;
 }
 
 .my-card {
@@ -101,14 +229,31 @@ header {
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.13) !important;
   padding: 45px 45px 50px 110px;
 }
+@media only screen and (max-width: 550px) {
+  .my-card {
+    height: auto;
+  }
+}
 @media only screen and (max-width: 1278px) {
   .my-card {
     padding: 25px 25px 30px 50px;
   }
 }
+@media only screen and (max-width: 992px) {
+  .my-card {
+    padding: 15px 15px 20px 50px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .my-card {
     padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .my-card {
+    margin-bottom: 20px;
   }
 }
 .my-card-nofixed {
@@ -119,11 +264,22 @@ header {
   padding: 37px 50px;
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.13);
 }
+@media only screen and (max-width: 550px) {
+  .my-card-nofixed {
+    padding: 15px;
+  }
+}
 .my-card-left {
   background-image: url("../img/ellipse_block.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: -24em;
+}
+@media only screen and (max-width: 768px) {
+  .my-card-left {
+    background-position: -15rem;
+    background-size: contain;
+  }
 }
 .my-card-right {
   padding: 45px 45px 110px 50px !important;
@@ -140,6 +296,17 @@ header {
 @media only screen and (max-width: 992px) {
   .my-card-right {
     background-position: 20em;
+    padding: 25px 25px 70px 30px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .my-card-right {
+    background-size: 0;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .my-card-right {
+    background-size: 0;
   }
 }
 .my-card-title {
@@ -192,11 +359,22 @@ header {
 footer {
   margin: 88px 0;
 }
+@media only screen and (max-width: 550px) {
+  footer {
+    margin: 30px 0;
+  }
+}
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 550px) {
+  .footer {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 .footer-text {
   max-width: 525px;
@@ -205,11 +383,22 @@ footer {
   color: #7e7e7e;
   line-height: 1.2;
 }
+@media only screen and (max-width: 992px) {
+  .footer-text {
+    font-size: 10px;
+    max-width: 385px;
+  }
+}
 .footer-socials {
   width: 300px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+@media only screen and (max-width: 992px) {
+  .footer-socials {
+    width: 210px;
+  }
 }
 .footer-socials-contacts a {
   display: block;
@@ -219,9 +408,45 @@ footer {
   color: black;
   line-height: 1.2;
 }
+@media only screen and (max-width: 992px) {
+  .footer-socials-contacts a {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .footer-socials-links a img {
+    width: 20px;
+  }
+}
 
 .text-decoration {
   text-decoration: underline;
+}
+
+.fixed-menu {
+  opacity: 0;
+  align-items: center;
+  display: flex;
+  transition: 0.2s ease-in all;
+  transform: translateX(-100vw);
+  padding: 20px 30px;
+  background-color: #fff;
+  height: 100vh;
+  max-height: 100%;
+  width: 100%;
+  z-index: 101;
+  position: fixed;
+  top: 0;
+}
+.fixed-menu.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.close {
+  position: absolute;
+  right: 10%;
+  top: 3%;
 }
 
 /*# sourceMappingURL=main.css.map */
