@@ -616,6 +616,10 @@ footer {
   text-decoration: none !important;
 }
 
+.logo {
+  max-height: 40px;
+}
+
 .styled-checkbox {
   position: absolute;
   opacity: 0;
