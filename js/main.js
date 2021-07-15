@@ -15,4 +15,10 @@ $(document).ready(function() {
         let aside = $(".aside")
         $(".fixed-menu").append(aside)
     }
+    $(".pay input").on('click', function (){
+        $(".pay input").removeAttr("checked")
+        $(this).is(":checked") ? $(this).prop("checked", true) : $(this).prop("checked", false)
+        $(this).is(":checked") ? console.info("checked") : console.info("unchecked")
+        console.info("PayBonus: ", $(".pay input:checked").val())
+    })
 } );

@@ -331,3 +331,78 @@ footer
   font-family: "Gilroy-SemiBold", sans-serif
   color: rgb(1, 1, 1)
   line-height: 1.2
+
+.balance
+  font-size: 48px
+  font-family: "Gilroy-SemiBold", sans-serif
+  color: rgb(242, 119, 51)
+  line-height: 1.2
+  min-height: 70px
+  @include media(phone)
+    text-align: center
+.bonus_text
+  @include media(phone)
+    text-align: center
+.bonus-title
+  margin-bottom: 23px
+  @include media(phone)
+    text-align: center
+.bonus-btn
+  display: flex
+  max-width: max-content
+  justify-content: center
+  align-items: center
+  @include media(phone)
+    margin: 0 auto
+  &:hover
+    color: #652d0e
+    text-decoration: none !important
+
+//Checkbox
+.styled-checkbox
+  position: absolute
+  opacity: 0
+
+  + label
+    position: relative
+    cursor: pointer
+    padding: 0
+
+    &:before
+      content: ""
+      margin-right: 10px
+      display: inline-block
+      vertical-align: text-top
+      width: 20px
+      height: 20px
+      background: #c6c6c6
+      border-radius: 5px
+
+  &:hover + label:before, &:checked + label:before
+    background: #f35429
+
+  &:disabled + label
+    color: #b8b8b8
+    cursor: auto
+
+    &:before
+      box-shadow: none
+
+  &:checked + label:after
+    content: ""
+    position: absolute
+    left: 5px
+    top: 9px
+    background: white
+    width: 2px
+    height: 2px
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white
+    transform: rotate(45deg)
+
+.payBonusType
+  font-size: 14px
+  font-family: "Gilroy-SemiBold", sans-serif
+  color: rgb(0, 0, 0)
+  line-height: 1.2
+  display: flex
+  align-items: flex-end
